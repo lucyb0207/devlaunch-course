@@ -1,66 +1,84 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client';
+import React from 'react';
 
-export default function Home() {
+const Home: React.FC = () => {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main>
+
+      {/* Hero Section */}
+      <div className="section">
+        <h1>Build Your First Full-Stack App</h1>
+        <p>
+          Learn full-stack development by building a professional Dev Dashboard — login, database, and deployed live — all while having fun.
+        </p>
+        <button className="cta" onClick={() => (window.location.href = '/checkout')}>
+          Enroll Now — £39
+        </button>
+      </div>
+
+      {/* What You’ll Learn */}
+      <div className="section section-light container">
+        <h2>What You'll Learn</h2>
+        <div className="cards-container">
+          <div className="card">
+            <h3>Frontend Skills</h3>
+            <p>HTML, CSS, React, Next.js – build beautiful, responsive UIs.</p>
+          </div>
+          <div className="card">
+            <h3>Backend Skills</h3>
+            <p>Node.js, Supabase, authentication, database management.</p>
+          </div>
+          <div className="card">
+            <h3>Deployment</h3>
+            <p>Deploy your app live so the world can use it.</p>
+          </div>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </div>
+
+      {/* Course Modules */}
+      <div className="section container">
+        <h2>Course Modules</h2>
+        <div className="cards-container">
+          <div className="card">Module 1: Foundations</div>
+          <div className="card">Module 2: Frontend</div>
+          <div className="card">Module 3: Backend</div>
+          <div className="card">Module 4: Features</div>
+          <div className="card">Module 5: Deployment</div>
         </div>
-      </main>
-    </div>
+      </div>
+
+      {/* Why DevLaunch */}
+      <div className="section section-light container">
+        <h2>Why DevLaunch?</h2>
+        <div className="cards-container">
+          <div className="card">Step-by-step guidance</div>
+          <div className="card">Real-world project</div>
+          <div className="card">Learn by doing — no fluff tutorials</div>
+        </div>
+      </div>
+
+      {/* Testimonials */}
+      <div className="section container">
+        <h2>Testimonials</h2>
+        <p className="testimonial">"This course transformed my coding skills in weeks!" — Jane D.</p>
+        <p className="testimonial">"I launched my first app thanks to DevLaunch!" — Mark S.</p>
+      </div>
+
+      {/* FAQ */}
+      <div className="section section-light container">
+        <h2>FAQ</h2>
+        <p><strong>Do I need prior experience?</strong> No! This course starts from scratch.</p>
+        <p><strong>How long do I have access?</strong> Lifetime access to all materials.</p>
+      </div>
+
+      {/* Final CTA */}
+      <div className="section container">
+        <button className="cta" onClick={() => (window.location.href = '/checkout')}>
+          Enroll Now — £39
+        </button>
+      </div>
+    </main>
   );
-}
+};
+
+export default Home;
